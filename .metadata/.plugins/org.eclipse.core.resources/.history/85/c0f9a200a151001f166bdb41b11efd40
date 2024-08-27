@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class ABC {
+
+	public static void main(String[] args) {
+		ArrayList a = new ArrayList();
+		a.add(11);
+		a.add(13);
+		a.add(a);
+		
+		
+		System.out.println(a.size());
+	}
+
+}

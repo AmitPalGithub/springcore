@@ -1,0 +1,31 @@
+package com.app.car;
+
+public class LuxuaryCar implements Car {
+
+	private LuxuaryEngine engine;
+	
+	public LuxuaryCar(LuxuaryEngine engine)
+	{
+		this.engine=engine;
+	}
+	
+	@Override
+	public void startCar() {
+		engine.startEngine();
+		System.out.println("Car is started.. ");
+
+	}
+
+	@Override
+	public void moveCar() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void musicSystem() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

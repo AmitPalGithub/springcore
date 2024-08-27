@@ -1,0 +1,17 @@
+package com.app.beans;
+
+public class Bluedart implements Delivery {
+
+	@Override
+	public void checkDelhiveryStatus(String orderId) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void returnProduct(String orderId) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

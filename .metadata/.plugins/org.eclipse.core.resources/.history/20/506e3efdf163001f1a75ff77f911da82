@@ -1,0 +1,8 @@
+package com.app.beans;
+
+public interface LogisticService {
+	
+	public void checkDelhiveryStatus(String orderId);
+	public void returnProduct(String orderId);
+
+}

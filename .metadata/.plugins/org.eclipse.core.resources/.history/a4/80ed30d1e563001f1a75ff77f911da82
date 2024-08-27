@@ -1,0 +1,24 @@
+package com.app.beans;
+
+public class Amazon {
+	
+	
+	private Delivery delivery;
+	
+	
+	public Amazon(Delhivery delhivery) {
+		
+		this.delivery=delhivery;
+	}
+	
+	public void checkDeliveryStatus(String orderId) {
+		
+		delivery.checkDelhiveryStatus(orderId);
+	}
+	
+	public void returnOrder(String orderId) {
+		
+		delivery.returnProduct(orderId);
+	}
+
+}

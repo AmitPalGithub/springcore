@@ -1,0 +1,16 @@
+package com.app.beans;
+
+public class Delhivery {
+	
+	
+	public void checkDelhiveryStatus(String orderId) {
+		
+		System.out.println("Your order id is "+ orderId+" and it will be delivered by today ");
+	}
+	
+	public void returnProduct(String orderId) {
+		
+		System.out.println("We have accepted your order with orderId "+orderId+" product will be picked up by Delhivery courier ");
+	}
+
+}
