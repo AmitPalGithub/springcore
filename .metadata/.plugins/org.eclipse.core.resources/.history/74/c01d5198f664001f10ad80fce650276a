@@ -1,0 +1,5 @@
+package com.app.student.dto;
+
+public class StudentDto {
+
+}

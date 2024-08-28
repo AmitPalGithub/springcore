@@ -1,0 +1,13 @@
+package com.app.student.dao;
+
+import com.app.student.entity.StudentEntity;
+
+public class StudentDaoImpl implements StudentDao {
+
+	@Override
+	public int saveStudent(StudentEntity entity) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

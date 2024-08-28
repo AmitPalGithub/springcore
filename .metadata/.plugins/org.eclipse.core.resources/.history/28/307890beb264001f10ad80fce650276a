@@ -1,0 +1,5 @@
+package com.app.student.dao;
+
+public interface StudentDao {
+
+}

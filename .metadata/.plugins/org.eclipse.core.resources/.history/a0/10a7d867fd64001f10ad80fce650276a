@@ -1,0 +1,15 @@
+package com.app.student.testapp;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class StudentMainApplication {
+
+	public static void main(String[] args) {
+
+
+		ApplicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+	}
+
+}
