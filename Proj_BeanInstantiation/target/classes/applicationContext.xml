@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean class="java.lang.Class"  id="c1"  factory-method="forName">
+			<constructor-arg value="java.util.Date"></constructor-arg>
+		</bean>
+		
+		
+		
+		<bean class="java.lang.String" id="s1">
+			<constructor-arg value="Hello"></constructor-arg>
+		</bean>
+		<bean class="java.lang.String"  id="s2" factory-bean="s1" factory-method="concat">
+			<constructor-arg value=" World"/>
+		</bean>
+		
+		
+		<bean class="java.lang.String" id="s3">
+			<constructor-arg value="springbooot"></constructor-arg>
+		</bean>
+		<bean class="java.lang.String" id="s4" factory-bean="s3"  factory-method="substring">
+			<constructor-arg value="2"/>
+			<constructor-arg value="6"/>
+		</bean>
+		
+
+</beans>
