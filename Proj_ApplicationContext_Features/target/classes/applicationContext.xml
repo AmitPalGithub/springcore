@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+		<bean class="com.app.beans.Student" id="stu" scope="singleton">
+			<property name="name" value="amit"></property>
+		</bean>
+		
+		
+		<bean class="com.app.beans.Bluedart" id="logistic" scope="prototype"/>
+		<bean class="com.app.beans.Amazon" id="amazon" lazy-init="true">
+			<property name="bluedart" ref="logistic"></property>
+		</bean>
+	
+</beans>
