@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <bean class="com.app.beans.Student" id="student">
+    	<property name="name" value="amit"></property>
+    	<property name="marks">
+    		<array>
+    			<value>98</value>
+    			<value>95</value>
+    			<value>94</value>
+    			<value>99</value>
+    		</array>
+    	</property>
+    	
+    </bean>
+    
+
+	<bean class="java.util.Date" id="d1">
+		<property name="year" value="2021"/>
+		<property name="month" value="2"></property>
+		<property name="date" value="22"></property>	
+	</bean>
+	
+	<bean class="java.util.Date" id="d2">
+		<property name="year" value="2018"/>
+		<property name="month" value="5"></property>
+		<property name="date" value="11"></property>	
+	</bean>
+	
+	
+	<bean class = "com.app.beans.Employee"  id ="emp">
+		<property name="name">
+			<list>
+				<value>amit</value>
+				<value>subho</value>
+				<value>akash</value>
+			</list>
+		</property>
+			
+		<property name="joiningDate">
+			<list>
+				<ref bean="d1"/>
+				<ref bean="d2"/>
+				<ref bean="d2"/>
+			</list>
+		</property>
+	</bean>
+	
+	
+	
+	<bean class="com.app.beans.User" id="user">
+		<property name="phoneNumbers">
+			<set>
+				<value>456789</value>
+				<value>876567</value>
+			</set>
+		</property>
+		
+		<property name="email">
+			<set>
+				<value>amit@gmail.com</value>
+				<value>rohit@gmail.com</value>
+				<value>amit@gmail.com</value>
+			</set>
+		</property>
+	</bean>
+	
+	
+	<bean class="com.app.beans.CollegeInfo" id="clg">
+		<property name="hod">
+			<map>
+				<entry key="Physics" value="Raju Sinha"/>
+				<entry key="Computer Science">
+					<value>Amit Trivedi</value>
+				</entry>
+			</map>
+		</property>
+		
+		<property name="holidays">
+			<map>
+				<entry key="holi" value-ref="a1"/>
+				<entry key="diwali" value-ref="a2"/>
+			</map>
+		</property>
+	</bean>
+
+	<bean class="java.util.Date" id="a1">
+		<property name="year" value="2011"></property>
+		<property name="month" value="2"></property>
+		<property name="date" value="10"></property>
+	</bean>
+	<bean class="java.util.Date" id="a2">
+		<property name="year" value="2020"></property>
+		<property name="month" value="7"></property>
+		<property name="date" value="18"></property>
+	</bean>
+
+	
+	<bean class="com.app.beans.properties.EmployeeDesig" id="employee">
+		<property name="employeeDesignation">
+			<props>
+				<prop key="Amit">SDE-1</prop>
+				<prop key="Rohit">Backend Developer</prop>
+				<prop key="Rastogi">SDE-1</prop>
+				<prop key="Rastogi">SDE-2</prop>
+			</props>
+		</property>
+	
+	</bean>
+
+</beans>
