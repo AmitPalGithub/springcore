@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	default-init-method="initialize"
+	default-destroy-method="myDestroy"
+	
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"> 
+
+
+		<bean class="java.util.Date" id="d1">
+			<property name="year" value="2012"/>
+			<property name="month" value="8"/>
+			<property name="date" value="12"/>
+		</bean>
+		
+		<bean class="java.util.Date" id="d2" p:year="102" p:month="0" p:date="10"/> 
+		<bean class="java.util.Date" id="d3" p:year="204" p:month="11" p:date="18"/>
+		
+		<bean class="com.app.beans.User" id="user" p:name="amit" p:dob-ref="d1"/>
+			
+		<bean class="com.app.beans.Student" id="stu" p:name="ankit" p:dob-ref="d2"/>
+		
+		<bean class="com.app.beans.Employee" id="emp" p:name="rohit" p:regDate-ref="d3"/>
+
+</beans>
